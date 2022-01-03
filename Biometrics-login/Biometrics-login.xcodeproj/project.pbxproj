@@ -14,6 +14,8 @@
 		8DD304F82782B26C0089C4F5 /* Biometrics_loginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD304F72782B26C0089C4F5 /* Biometrics_loginTests.swift */; };
 		8DD305022782B26C0089C4F5 /* Biometrics_loginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD305012782B26C0089C4F5 /* Biometrics_loginUITests.swift */; };
 		8DD305042782B26C0089C4F5 /* Biometrics_loginUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD305032782B26C0089C4F5 /* Biometrics_loginUITestsLaunchTests.swift */; };
+		8DD305122782B60C0089C4F5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD305112782B60C0089C4F5 /* FirebaseAuth */; };
+		8DD305142782B78F0089C4F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DD305132782B78F0089C4F5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		8DD304FD2782B26C0089C4F5 /* Biometrics-loginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Biometrics-loginUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD305012782B26C0089C4F5 /* Biometrics_loginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics_loginUITests.swift; sourceTree = "<group>"; };
 		8DD305032782B26C0089C4F5 /* Biometrics_loginUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics_loginUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DD305132782B78F0089C4F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD305122782B60C0089C4F5 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +101,7 @@
 				8DD304E62782B26B0089C4F5 /* Biometrics_loginApp.swift */,
 				8DD304E82782B26B0089C4F5 /* ContentView.swift */,
 				8DD304EA2782B26C0089C4F5 /* Assets.xcassets */,
+				8DD305132782B78F0089C4F5 /* GoogleService-Info.plist */,
 				8DD304EC2782B26C0089C4F5 /* Preview Content */,
 			);
 			path = "Biometrics-login";
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = "Biometrics-login";
+			packageProductDependencies = (
+				8DD305112782B60C0089C4F5 /* FirebaseAuth */,
+			);
 			productName = "Biometrics-login";
 			productReference = 8DD304E32782B26B0089C4F5 /* Biometrics-login.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 8DD304DA2782B26B0089C4F5;
+			packageReferences = (
+				8DD305102782B60C0089C4F5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 8DD304E42782B26B0089C4F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +244,7 @@
 			files = (
 				8DD304EE2782B26C0089C4F5 /* Preview Assets.xcassets in Resources */,
 				8DD304EB2782B26C0089C4F5 /* Assets.xcassets in Resources */,
+				8DD305142782B78F0089C4F5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +597,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8DD305102782B60C0089C4F5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8DD305112782B60C0089C4F5 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8DD305102782B60C0089C4F5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8DD304DB2782B26B0089C4F5 /* Project object */;
 }
