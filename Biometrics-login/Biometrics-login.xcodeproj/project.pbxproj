@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D5DCA85278336F70099791A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DCA84278336F70099791A /* Home.swift */; };
+		8D7EEDBB2785D1560011B772 /* KeyChainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7EEDBA2785D1560011B772 /* KeyChainHelper.swift */; };
+		8D7EEDBD2785D6D30011B772 /* KeyChainPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7EEDBC2785D6D30011B772 /* KeyChainPropertyWrapper.swift */; };
 		8DD304E72782B26B0089C4F5 /* Biometrics_loginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD304E62782B26B0089C4F5 /* Biometrics_loginApp.swift */; };
 		8DD304E92782B26B0089C4F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD304E82782B26B0089C4F5 /* ContentView.swift */; };
 		8DD304EB2782B26C0089C4F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD304EA2782B26C0089C4F5 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		8D5DCA84278336F70099791A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		8D5DCA862784A6920099791A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D7EEDBA2785D1560011B772 /* KeyChainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainHelper.swift; sourceTree = "<group>"; };
+		8D7EEDBC2785D6D30011B772 /* KeyChainPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainPropertyWrapper.swift; sourceTree = "<group>"; };
 		8DD304E32782B26B0089C4F5 /* Biometrics-login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Biometrics-login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD304E62782B26B0089C4F5 /* Biometrics_loginApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics_loginApp.swift; sourceTree = "<group>"; };
 		8DD304E82782B26B0089C4F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D7EEDB92785D1480011B772 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8D7EEDBA2785D1560011B772 /* KeyChainHelper.swift */,
+				8D7EEDBC2785D6D30011B772 /* KeyChainPropertyWrapper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		8DD304DA2782B26B0089C4F5 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +118,7 @@
 		8DD304E52782B26B0089C4F5 /* Biometrics-login */ = {
 			isa = PBXGroup;
 			children = (
+				8D7EEDB92785D1480011B772 /* Helper */,
 				8D5DCA862784A6920099791A /* Info.plist */,
 				8DD305162782B83A0089C4F5 /* ViewModel */,
 				8DD305152782B8340089C4F5 /* View */,
@@ -299,7 +313,9 @@
 				8DD3051A2782B9F90089C4F5 /* LoginViewModel.swift in Sources */,
 				8DD304E92782B26B0089C4F5 /* ContentView.swift in Sources */,
 				8D5DCA85278336F70099791A /* Home.swift in Sources */,
+				8D7EEDBB2785D1560011B772 /* KeyChainHelper.swift in Sources */,
 				8DD305182782B95F0089C4F5 /* LoginPage.swift in Sources */,
+				8D7EEDBD2785D6D30011B772 /* KeyChainPropertyWrapper.swift in Sources */,
 				8DD304E72782B26B0089C4F5 /* Biometrics_loginApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,13 +10,21 @@ import SwiftUI
 struct ContentView: View {
     @AppStorage("log_status") var logStatus: Bool = false
     
+    @KeyChain(key: "use_face_email", account: "FaceIDLogin") var storedEmail
+    
     var body: some View {
         NavigationView {
             if logStatus {
                 Home()
+                    .onTapGesture {
+                        print(storedEmail)
+                    }
             } else {
                 LoginPage()
                     .navigationBarHidden(true)
+                    .onTapGesture {
+                        print(storedEmail)
+                    }
             }
         }
     }

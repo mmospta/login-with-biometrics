@@ -14,8 +14,8 @@ class LoginViewModel: ObservableObject {
     @Published var password: String = ""
     
     @AppStorage("use_face_id") var useFaceID: Bool = false
-    @AppStorage("use_face_email") var faceIDEmail: String = ""
-    @AppStorage("use_face_password") var faceIDPassword: String = ""
+    @KeyChain(key: "use_face_email", account: "FaceIDLogin") var storedEmail
+    @KeyChain(key: "use_face_password", account: "FaceIDLogin") var storedPassword
     @AppStorage("log_status") var logStatus: Bool = false
     
     @Published var showError: Bool = false
@@ -24,10 +24,13 @@ class LoginViewModel: ObservableObject {
     func loginUser(useFaceID: Bool, email: String = "", password: String = "") async throws {
         let _ = try await Auth.auth().signIn(withEmail: email != "" ? email : self.email, password: password != "" ? password : self.password)
         DispatchQueue.main.async {
-            if useFaceID && self.faceIDEmail == "" {
+            if useFaceID && self.storedEmail == nil {
                 self.useFaceID = useFaceID
-                self.faceIDEmail = self.email
-                self.faceIDPassword = self.password
+                let emailData = self.email.data(using: .utf8)
+                let passwordData = self.password.data(using: .utf8)
+                
+                self.storedEmail = emailData
+                self.storedPassword = passwordData
             }
             self.logStatus = true
         }
@@ -40,8 +43,8 @@ class LoginViewModel: ObservableObject {
     
     func authenticateUser() async throws {
         let status = try await LAContext().evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Login Into App")
-        if status {
-            try await loginUser(useFaceID: useFaceID, email: self.faceIDEmail, password: self.faceIDPassword)
+        if let emailData =  storedEmail, let passwordData = storedPassword, status {
+            try await loginUser(useFaceID: useFaceID, email: String(data: emailData, encoding: .utf8) ?? "", password: String(data: passwordData, encoding: .utf8) ?? "")
         }
     }
 }
