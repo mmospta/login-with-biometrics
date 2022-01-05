@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D5DCA85278336F70099791A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5DCA84278336F70099791A /* Home.swift */; };
 		8DD304E72782B26B0089C4F5 /* Biometrics_loginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD304E62782B26B0089C4F5 /* Biometrics_loginApp.swift */; };
 		8DD304E92782B26B0089C4F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD304E82782B26B0089C4F5 /* ContentView.swift */; };
 		8DD304EB2782B26C0089C4F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD304EA2782B26C0089C4F5 /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 		8DD305042782B26C0089C4F5 /* Biometrics_loginUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD305032782B26C0089C4F5 /* Biometrics_loginUITestsLaunchTests.swift */; };
 		8DD305122782B60C0089C4F5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8DD305112782B60C0089C4F5 /* FirebaseAuth */; };
 		8DD305142782B78F0089C4F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DD305132782B78F0089C4F5 /* GoogleService-Info.plist */; };
+		8DD305182782B95F0089C4F5 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD305172782B95F0089C4F5 /* LoginPage.swift */; };
+		8DD3051A2782B9F90089C4F5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD305192782B9F90089C4F5 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D5DCA84278336F70099791A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		8D5DCA862784A6920099791A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8DD304E32782B26B0089C4F5 /* Biometrics-login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Biometrics-login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD304E62782B26B0089C4F5 /* Biometrics_loginApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics_loginApp.swift; sourceTree = "<group>"; };
 		8DD304E82782B26B0089C4F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +52,8 @@
 		8DD305012782B26C0089C4F5 /* Biometrics_loginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics_loginUITests.swift; sourceTree = "<group>"; };
 		8DD305032782B26C0089C4F5 /* Biometrics_loginUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biometrics_loginUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8DD305132782B78F0089C4F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8DD305172782B95F0089C4F5 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		8DD305192782B9F90089C4F5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +105,9 @@
 		8DD304E52782B26B0089C4F5 /* Biometrics-login */ = {
 			isa = PBXGroup;
 			children = (
+				8D5DCA862784A6920099791A /* Info.plist */,
+				8DD305162782B83A0089C4F5 /* ViewModel */,
+				8DD305152782B8340089C4F5 /* View */,
 				8DD304E62782B26B0089C4F5 /* Biometrics_loginApp.swift */,
 				8DD304E82782B26B0089C4F5 /* ContentView.swift */,
 				8DD304EA2782B26C0089C4F5 /* Assets.xcassets */,
@@ -130,6 +140,23 @@
 				8DD305032782B26C0089C4F5 /* Biometrics_loginUITestsLaunchTests.swift */,
 			);
 			path = "Biometrics-loginUITests";
+			sourceTree = "<group>";
+		};
+		8DD305152782B8340089C4F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DD305172782B95F0089C4F5 /* LoginPage.swift */,
+				8D5DCA84278336F70099791A /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8DD305162782B83A0089C4F5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8DD305192782B9F90089C4F5 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD3051A2782B9F90089C4F5 /* LoginViewModel.swift in Sources */,
 				8DD304E92782B26B0089C4F5 /* ContentView.swift in Sources */,
+				8D5DCA85278336F70099791A /* Home.swift in Sources */,
+				8DD305182782B95F0089C4F5 /* LoginPage.swift in Sources */,
 				8DD304E72782B26B0089C4F5 /* Biometrics_loginApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +464,8 @@
 				DEVELOPMENT_TEAM = KV5A596S79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Biometrics-login/Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -463,6 +495,8 @@
 				DEVELOPMENT_TEAM = KV5A596S79;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Biometrics-login/Info.plist";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
